@@ -1,0 +1,180 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    height: 56px;
+    background-color: white;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: rgb(194, 194, 194);
+}
+
+.left-section,
+.middle-section,
+.right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-section {
+    margin-right: 50px;
+}
+
+.menu-img {
+    width: 24px;
+    margin-right: 24px;
+    margin-left: 24px;
+}
+
+.logo-img {
+    width: 90px;
+}
+
+.middle-section {
+    flex: 1;
+}
+
+.searchbox-div {
+    display: flex;
+    flex: 1;
+    max-width: 360px;
+}
+
+.searchbox {
+    flex: 1;
+    height: 37px;
+    border-color: rgb(194, 194, 194);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+}
+
+.searchbox::placeholder {
+    padding-left: 10px;
+    color: rgb(136, 134, 134);
+    font-size: 15px;
+}
+
+
+.search-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 38px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(194 194 194);
+    background-color: rgb(231, 230, 230);
+    margin-left: -1px;
+    position: relative;
+}
+
+
+.search-icon img {
+    width: 25px;
+}
+
+.voice-search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    height: 39px;
+    width: 35px;
+    background-color: rgb(247, 247, 247);
+    border-radius: 17.5px;
+    position: relative;
+    
+}
+
+
+.voice-search img {
+    height: 23px;
+}
+
+.right-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 160px;
+    margin-right: 55px;
+    margin-left: 30px;
+}
+
+.create,
+.apps,
+.notifications {
+    width: 25px;
+    margin-right: 18px;
+}
+
+.create-div,
+.apps-div {
+    position: relative;
+}
+
+.my-channel {
+    width: 30px;
+    border-radius: 15px;
+}
+
+.notifications-div {
+    position: relative;
+
+    .notifications-count {
+        position: absolute;
+        top: -2px;
+        right: 13px;
+        background-color: rgb(199, 4, 4);
+        color: white;
+        font-size: 12px;
+        width: 16px;
+        height: 16px;
+        text-align: center;
+        border-radius: 8px;
+        border-style: solid;
+        border-width: 1.5px;
+        border-color: white;
+    }
+}
+
+.menu-img,
+.logo-img,
+.search-icon img,
+.voice-search img,
+.create,
+.apps,
+.notifications,
+.my-channel {
+    cursor: pointer;
+}
+
+.tool-tip {
+    color: white;
+    background-color: gray;
+    padding: 5px 3px;
+    font-size: 12px;
+    border: none;
+    border-radius: 2px;
+    white-space: nowrap;
+    position: absolute;
+    bottom: -34px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.search-icon:hover .tool-tip,
+.voice-search:hover .tool-tip,
+.create-div:hover .tool-tip,
+.apps-div:hover .tool-tip,
+.notifications-div:hover .tool-tip {
+    opacity:1;
+}
